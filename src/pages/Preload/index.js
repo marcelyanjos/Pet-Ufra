@@ -24,11 +24,11 @@ export default function Home() {
     checkToken();
   }, []);
 
-  const handleLoginButtonClick = () => {
-    navigation.reset({
-      routes: [{name: 'Main'}],
-    });
-  };
+  // const handleLoginButtonClick = () => {
+  //   navigation.reset({
+  //     routes: [{name: 'Main'}],
+  //   });
+  // };
 
   return (
     <SafeAreaView
