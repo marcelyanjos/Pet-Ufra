@@ -6,7 +6,7 @@ import {createStackNavigator} from '@react-navigation/stack'
 import Preload from '../src/pages/Preload'
 import SignIn from '../src/pages/SignIn'
 import SignUp from '../src/pages/SignUp'
-import HomeScreen from './drawer'
+import HomeScreen from './MainTab'
 // import Main from '../pages/Main/index'
 
 

@@ -1,12 +1,18 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve"
-	 stroke="black" stroke-width="1">
-<g id="Layer_1">
-	<path fill='black' d="M33,4v5.586l-8-8L1.293,25.293l1.414,1.414L4,25.414V49h14h14h14V25.414l1.293,1.293l1.414-1.414L42,18.586V4H33z M35,6h5
-		v10.586l-5-5V6z M20,47V31h10v16H20z M44,47H32V29H18v18H6V23.414l19-19l19,19V47z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="64" height="64" viewBox="0 0 64 64" xml:space="preserve">
+<desc>Created with Fabric.js 4.2.0</desc>
+<defs>
+</defs>
+<g transform="matrix(1 0 0 1 540 540)" id="a453a359-0add-4f97-b5f9-8d115b0d552e"  >
 </g>
-<g>
+<g transform="matrix(1 0 0 1 540 540)" id="a7b35a72-9fdf-43ea-8584-52bc5b476a96"  >
+<rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  x="-540" y="-540" rx="0" ry="0" width="1080" height="1080" />
+</g>
+<g transform="matrix(1 0 0 1 32 32)" id="2b36c540-4e35-4acc-a23e-97dd05b6532b"  >
+	<image style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABFVJREFUeF7tm02IHEUUx/+vJosuEpIoHsR48hTIsGLAm1fxA9adqe4YNoYoCwl4EDwEPAgOevAS8CAISkQIaqLd1bsu5uucm2hIXPXkKQmeghhkYZfN9JMKM0tv7/TXdFfNzmzPsbted/1/79Wrqlc9hF3+o12uH7YBULvdfhWABPAigKe0A4jobwDXASil1BUAbMsx1gC4rvtct9v9goheSBPHzD8z86nFxcVbNiBYAeA4TjsMw/NE9FgeUcy8CuBEEASLedqXaWMcgOM4LjN/B2BPwY52AbyllPqmoF2h5kYBOI5zjJm1gEa0V8x8UQjx+fT09A19fXV19QgRvQPgjVjvu0T0pu/7FwupKtDYGIAE8Q+IaMH3/fOD+iilPAngXCxajEIwAiAh7LWQk77vf5vmoHa77RDRhTgEU8OhcgBlxPfB2IRQKYAqxNuGUBmAKsXbhFAJABPibUEoDcCkeBsQSgGwId40hKEB2BRvEsJQAEYh3hSEwgBGKd4EhEIAdoL4qiHkBrCTxFcJIReAnSi+KgiZAHay+CogpAIYB/FlISQCGCfxZSAMBCCl/ATA+wOqM5n7+QLFGCNNE7bS+l1nlVJn4i/dBqDn+R/GUXxGJOjbJ+I1xi0AkgqYvbpcaiXHiDtLPLQXCV7ckfHK0iaAtOqtUipztijRV2OmUspBByxbqs0PhWWVricMgJa8CUEfVbWISIfKltJ11C0TCOAhBGZ2SUp5F8DTEcEP4ocYEwQgru2uBnAbwDM9ALrBcQDfT2gE6IMXncz7p1R3qNVqvSyE+FKfyBLRu77v/xhPHpMSAVqH4zivM/NnWm8YhqeTFkJbsuckAchcCOkGkxwBNYAYARtDQE+1R4UQC8x8BMDjGSuffwD8AuArpZSenof+WiRPJBsFMDs7u3dqakrPKK8Mudy7vLGxcWx5efm/YexHDUBPsZdKiO9r/kkpNTtMJIwUgJTyaHw9MYwXtY1esQVB4Be1HzWAawBe6neamX9tNBpve573e4o3ddQ0AXwN4Pm+LRFd9X2/8DAaNYB7AJ6IeG1GKfVbHi+2Wq0ZIcTNCLx7QRA8mcc22mbUAEL9CWC/Q81ms9HpdPS1zF+n0xErKyt6x7bJQCklMg1jDUYNoNRqMk/ns4DkeYaxaTDPy9MElLXPu6KtAQzygi36dQSkELDlhHoI1ENgAAFb4VfngDoHJBOwFYV1EqyTYJ0EtxOQUq4BeKR/Rwix3/O8+1mbj6JbUZOzgOu6+8Iw/DeypV4LgmA6/s6kHPAngEMR43NhGJ5ZWlrafGAWjLJJrIz93Nzc/kajcRbAQqSffyilDucC4DjOx8z8QZbIMbv/kVLqw1wA5ufnD6yvr+v/7fXPDMdM67bu3u52uzODIjjxwwfXdZthGF4GcHDM1d8RQrzmed7KIB2pX370xtJ7+rSMmZ8lokfHAQYzrxHRX0SkiOjTtAQ+lp++VOmEXQ/gfwCweae10UfqAAAAAElFTkSuQmCC" x="-32" y="-32" width="64" height="64"></image>
+</g>
+<g transform="matrix(0.27 0 0 0.32 32.16 49.08)" id="9d489161-ea8b-4f1d-95f3-48e4061dae0f"  >
+<rect style="stroke: rgb(83,83,83); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(83,83,83); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  x="-33.085" y="-33.085" rx="0" ry="0" width="66.17" height="66.17" />
 </g>
 </svg>

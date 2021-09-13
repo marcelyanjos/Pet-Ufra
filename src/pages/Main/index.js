@@ -20,7 +20,7 @@ export default function Main(){
 //   run();
     return(
         <>
-        <Header navigation={navigation}/>
+        {/* <Header navigation={navigation}/> */}
         <Text>HI LORENA</Text>
         </>
     )
