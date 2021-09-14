@@ -5,8 +5,11 @@ import { UserContext } from '../src/Context/UserContext'
 
 import HomeIcon from '../src/assets/home.svg';
 import CalendarIcon from '../src/assets/calendar.svg';
-// import TodayIcon from '../assets/today.svg';
-// import FavoriteIcon from '../assets/favorite.svg';
+import MapIcon from '../src/assets/map.svg';
+import AdoptIcon from '../src/assets/home_heart.svg';
+import HeartIcon from '../src/assets/heart_outline.svg';
+import InfoIcon from '../src/assets/info.svg';
+import ProfileIcon from '../src/assets/profile.svg';
 // import AccountIcon from '../assets/account.svg';
 
 
@@ -22,14 +25,14 @@ const TabItem = styled.TouchableOpacity`
     justify-content: center;
     align-items: center;
 `;
-const TabItemCenter = styled.TouchableOpacity`
-    width: 70px;
-    height: 70px;
+const TabItemCenter = styled.View`
+    width: 67px;
+    height: 45px;
     justify-content: center;
     align-items: center;
     background-color: #FFF;
     border-radius: 35px;
-    border: 3px solid #4EADBE;
+    border: 3px solid #BBDFF3;
     margin-top: -20px;
 `;
 const AvatarIcon = styled.Image`
@@ -49,18 +52,34 @@ export default ({ state, navigation }) => {
         <TabArea>
             <TabItem onPress={()=>goTo('Home')}>
                 <HomeIcon style={{opacity: state.index===0? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
-                <Text style={{color:'#535353'}}>Home</Text>
+                {/* <Text style={{color:'#535353'}}>Home</Text> */}
             </TabItem>
             <TabItem onPress={()=>goTo('Calendar')}>
                 <CalendarIcon style={{opacity: state.index===1? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
-                <Text style={{color:'#535353'}}>Calendario</Text>
+                {/* <Text style={{color:'#535353'}}>Calendario</Text> */}
             </TabItem>
-            {/* <TabItemCenter onPress={()=>goTo('Appointments')}>
-                <TodayIcon width="32" height="32" fill="#4EADBE" />
-            </TabItemCenter> */}
-            {/* <TabItem onPress={()=>goTo('Favorites')}>
-                <FavoriteIcon style={{opacity: state.index===3? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
-            </TabItem> */}
+            <TabItem onPress={()=>goTo('Map')}>
+                <MapIcon style={{opacity: state.index===2? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
+                {/* <Text style={{color:'#535353'}}>Mapa</Text> */}
+            </TabItem>
+            <TabItem onPress={()=>goTo('Adopt')}>
+                <TabItemCenter>
+                <AdoptIcon style={{opacity: state.index===3? 1 : 0.5}} width="32" height="32" fill="#4EADBE" />
+                </TabItemCenter>
+                {/* <Text style={{color:'#535353'}}>Adote</Text> */}
+            </TabItem>
+            <TabItem onPress={()=>goTo('Donation')}>
+                <HeartIcon style={{opacity: state.index===4? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
+                {/* <Text style={{color:'#535353'}}>Doação</Text> */}
+            </TabItem>
+            <TabItem onPress={()=>goTo('Informations')}>
+                <InfoIcon style={{opacity: state.index===5? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
+                {/* <Text style={{color:'#535353'}}>Infos</Text> */}
+            </TabItem>
+            <TabItem onPress={()=>goTo('Profile')}>
+                <ProfileIcon style={{opacity: state.index===6? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
+                {/* <Text style={{color:'#535353'}}>Perfil</Text> */}
+            </TabItem>
             {/* <TabItem onPress={()=>goTo('Profile')}>
                 {user.avatar != '' ?
                     <AvatarIcon source={{uri: user.avatar}} />
