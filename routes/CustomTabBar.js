@@ -54,14 +54,18 @@ export default ({ state, navigation }) => {
                 <HomeIcon style={{opacity: state.index===0? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
                 {/* <Text style={{color:'#535353'}}>Home</Text> */}
             </TabItem>
-            <TabItem onPress={()=>goTo('Calendar')}>
-                <CalendarIcon style={{opacity: state.index===1? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
+            <TabItem onPress={()=>goTo('Informations')}>
+                <InfoIcon style={{opacity: state.index===5? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
+                {/* <Text style={{color:'#535353'}}>Infos</Text> */}
+            </TabItem>
+            {/* <TabItem onPress={()=>goTo('Calendar')}> */}
+                {/* <CalendarIcon style={{opacity: state.index===1? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" /> */}
                 {/* <Text style={{color:'#535353'}}>Calendario</Text> */}
-            </TabItem>
-            <TabItem onPress={()=>goTo('Map')}>
-                <MapIcon style={{opacity: state.index===2? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
+            {/* </TabItem> */}
+            {/* <TabItem onPress={()=>goTo('Map')}> */}
+                {/* <MapIcon style={{opacity: state.index===2? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" /> */}
                 {/* <Text style={{color:'#535353'}}>Mapa</Text> */}
-            </TabItem>
+            {/* </TabItem> */}
             <TabItem onPress={()=>goTo('Adopt')}>
                 <TabItemCenter>
                 <AdoptIcon style={{opacity: state.index===3? 1 : 0.5}} width="32" height="32" fill="#4EADBE" />
@@ -72,10 +76,7 @@ export default ({ state, navigation }) => {
                 <HeartIcon style={{opacity: state.index===4? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
                 {/* <Text style={{color:'#535353'}}>Doação</Text> */}
             </TabItem>
-            <TabItem onPress={()=>goTo('Informations')}>
-                <InfoIcon style={{opacity: state.index===5? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
-                {/* <Text style={{color:'#535353'}}>Infos</Text> */}
-            </TabItem>
+            
             <TabItem onPress={()=>goTo('Profile')}>
                 <ProfileIcon style={{opacity: state.index===6? 1 : 0.5}} width="24" height="24" fill="#FFFFFF" />
                 {/* <Text style={{color:'#535353'}}>Perfil</Text> */}
