@@ -11,9 +11,16 @@ import {
 import {Button} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import styles from './style';
+import { useNavigation } from '@react-navigation/native';
+import Filter from './filter';
 import {data} from './data';
 
-export default function Home() {
+export default function Home({navigation}) {
+  const goTo = (screenName) => {
+    navigation.navigate(screenName);
+}
+  
   return (
     <SafeAreaView style={{backgroundColor: '#EFF9FF', height: '100%'}}>
       <SafeAreaView
@@ -33,39 +40,70 @@ export default function Home() {
             type="clear"
             // buttonStyle={{ width:'10%'}}
             icon={<Icon name="filter" size={20} color="black" />}
-            // onPress={() => Alert.alert('Simple Button pressed')}
+            onPress={() => goTo('Filter')}
           />
         </SafeAreaView>
       </SafeAreaView>
-      
-        {/* <ScrollView> */}
-          <FlatList
-            data={data}
-            keyExtractor={item => item.id}
-            numColumns={2}
-            renderItem={({item}) => {
-              return (
-                <SafeAreaView style={{ width:'50%', alignItems:'center',display:'flex', justifyContent:'center'}}>
-                  <SafeAreaView
+
+      {/* <ScrollView> */}
+      <FlatList
+        data={data}
+        keyExtractor={item => item.id}
+        numColumns={2}
+        renderItem={({item}) => {
+          return (
+            <SafeAreaView
+              style={{
+                width: '50%',
+                alignItems: 'center',
+                display: 'flex',
+                justifyContent: 'center',
+              }}>
+              <SafeAreaView
+                style={{
+                  alignItems: 'center',
+                  backgroundColor: '#ffffff',
+                  // flexGrow: 1,
+                  width: 170,
+                  height: 250,
+                  margin: 20,
+                  // padding: 20,
+                  borderRadius: 12.34,
+                }}>
+                <Image
                   style={{
-                    alignItems: 'center',
-                    backgroundColor: '#ffffff',
-                    // flexGrow: 1,
-                    width:146,
-                    height:211.98,
-                    margin: 20,
-                    // padding: 20,
-                    borderRadius:12.34
+                    width: 172,
+                    height: 124.3,
+                    borderTopLeftRadius: 12.34,
+                    borderTopRightRadius: 12.34,
+                  }}
+                  source={{uri: item.imagem}}
+                />
+                <SafeAreaView style={{width:'100%',display:'flex', alignItems:'center'}}>
+                <SafeAreaView
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    width: '90%',
+                    justifyContent: 'space-between',
+                    marginTop: 5,
                   }}>
-                  <Image style={{width:146, height:124.3, borderTopLeftRadius:12.34, borderTopRightRadius:12.34}} source={{uri:item.imagem}} />
-                  <Text style={{color: '#333333'}}>{item.nome}</Text>
+                  <Text style={{color: '#333333', fontWeight:'bold', fontSize:18}}>{item.nome}</Text>
+                  <Image style={{width: 20, height: 20}} source={item.gender} />
+                </SafeAreaView >
+                <SafeAreaView style={{width:'90%', height:'43%'}}>
+                <Text style={{color: '#333333'}}>Descrição: {item.descrição}</Text>
                 </SafeAreaView>
+                <SafeAreaView style={{width:'90%'}}>
+                <Text style={{color: '#333333'}}>Idade: {item.idade}</Text>
                 </SafeAreaView>
-              );
-            }}
-          />
-          {/* </ScrollView> */}
-      
+              </SafeAreaView>
+              </SafeAreaView>
+            </SafeAreaView>
+          );
+        }}
+      />
+      {/* </ScrollView> */}
     </SafeAreaView>
   );
 }
