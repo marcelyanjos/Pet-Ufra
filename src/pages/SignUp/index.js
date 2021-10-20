@@ -5,12 +5,8 @@ import {
     CustomButton,
     CustomButtonText,
 } from './styles'
-// import Logo from '../../assets/logo.svg'
-// import Google from '../../assets/google.svg';
 // import { useHistory } from 'react-router-dom';
 // import api from '../../services/api';
-import Titulo from '../../assets/titulo.svg'
-import Logo from '../../assets/logo.svg'
 
 export default function Home() {
 

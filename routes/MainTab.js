@@ -10,7 +10,7 @@ import Adopt from '../src/pages/Adopt';
 import Donation from '../src/pages/Donation';
 import Informations from '../src/pages/Infos';
 import Profile from '../src/pages/Profile';
-import Filter from '../src/pages/Adopt/filter'
+
 
 const Tab = createBottomTabNavigator();
 
@@ -20,7 +20,7 @@ export default () => (
         <Tab.Screen name="Calendar" component={Calendar} />
         <Tab.Screen name="Map" component={Map} />
         <Tab.Screen name="Adopt" component={Adopt} />
-        <Tab.Screen name="Filter" component={Filter} />
+        {/* <Tab.Screen name="Filter" component={Filter} /> */}
         <Tab.Screen name="Donation" component={Donation} />
         <Tab.Screen name="Informations" component={Informations} />
         <Tab.Screen name="Profile" component={Profile} />

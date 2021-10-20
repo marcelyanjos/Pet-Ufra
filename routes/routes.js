@@ -8,7 +8,7 @@ import SignIn from '../src/pages/SignIn'
 import SignUp from '../src/pages/SignUp'
 import HomeScreen from './MainTab'
 // import Main from '../pages/Main/index'
-
+import Filter from '../src/pages/Adopt/filter'
 
 const Stack = createStackNavigator();
 
@@ -24,7 +24,7 @@ function Routes(){
                 <Stack.Screen name='SignIn' component={SignIn} />
                 <Stack.Screen name='SignUp' component={SignUp} />
                 <Stack.Screen name='Main' component={HomeScreen} />
-                
+                <Stack.Screen name='Filter' component={Filter} />
 
 
             </Stack.Navigator>

@@ -13,14 +13,15 @@ import {ScrollView} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './style';
 import { useNavigation } from '@react-navigation/native';
-import Filter from './filter';
+// import Filter from './filter';
 import {data} from './data';
 
-export default function Home({navigation}) {
-  const goTo = (screenName) => {
-    navigation.navigate(screenName);
-}
-  
+export default function Home() {
+  const navigation = useNavigation();
+
+  const handleFilterClick = () =>{
+    navigation.navigate('Filter');
+  }
   return (
     <SafeAreaView style={{backgroundColor: '#EFF9FF', height: '100%'}}>
       <SafeAreaView
@@ -40,7 +41,7 @@ export default function Home({navigation}) {
             type="clear"
             // buttonStyle={{ width:'10%'}}
             icon={<Icon name="filter" size={20} color="black" />}
-            onPress={() => goTo('Filter')}
+            onPress={() => handleFilterClick()}
           />
         </SafeAreaView>
       </SafeAreaView>

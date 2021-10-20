@@ -2,8 +2,6 @@ import React from 'react'
 import {StyleSheet, Image, PixelRatio, SafeAreaView, Text, TouchableOpacity} from 'react-native'
 import { Appbar, Card, Title, Paragraph } from 'react-native-paper';
 import Menu from '../../assets/menu.svg'
-import Transferir from '../../assets/transferir.png'
-
 
 const styles =StyleSheet.create({
     logo:{
