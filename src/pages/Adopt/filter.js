@@ -20,13 +20,13 @@ export default function Filter() {
       <SafeAreaView
         style={{
           height: '7%',
-          backgroundColor: '#ffffff',
+          backgroundColor: '#EFF9FF',
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <SafeAreaView>
+        <SafeAreaView style={{backgroundColor:'#EFF9FF'}}>
           <Button
             type="clear"
             // buttonStyle={{ width:'10%'}}
@@ -39,6 +39,7 @@ export default function Filter() {
             width: '85%',
             marginLeft: 10,
             justifyContent: 'space-between',
+            backgroundColor:'#EFF9FF',
           }}>
           <Text>Filtro</Text>
         </SafeAreaView>
