@@ -1,7 +1,7 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 target 'PetUfra' do
   config = use_native_modules!
@@ -12,13 +12,13 @@ target 'PetUfra' do
     :hermes_enabled => false
   )
 
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-async-storage/async-storage'
+
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
   pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
-
-  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-async-storage/async-storage'
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
@@ -35,5 +35,6 @@ target 'PetUfra' do
 
   post_install do |installer|
     react_native_post_install(installer)
+    __apply_Xcode_12_5_M1_post_install_workaround(installer)
   end
 end
