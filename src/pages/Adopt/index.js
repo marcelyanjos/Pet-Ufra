@@ -7,7 +7,6 @@ import {
   FlatList,
   StyleSheet,
   View,
-  Modal,
   Text,
   Pressable,
 } from 'react-native';
@@ -15,73 +14,25 @@ import {Button} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './style';
-import {useNavigation} from '@react-navigation/native';
-// import Filter from './filter';
+import ModalFilter from './filter';
 import {data} from './data';
 
 export default function Home() {
   const [modalVisible, setModalVisible] = useState(false);
-  const navigation = useNavigation();
+  // const [modalData, setModalData] = useState({});
 
-  const handleFilterClick = () => {
-    navigation.navigate('Filter');
-  };
+  function openModal() {
+    // setModalData();
+    setModalVisible(true);
+  }
+
   return (
     <SafeAreaView>
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
-          setModalVisible(!modalVisible);
-        }}>
-        <View
-          style={{
-            flex: 1,
-            backgroundColor: 'rgba(0,0,0,0.2)',
-            justifyContent: 'flex-end',
-            alignItems: 'center',
-          }}>
-          <View
-            style={{
-              height: '60%',
-              width: '100%',
-              justifyContent: 'center',
-              alignItems: 'center',
-              backgroundColor: 'white',
-              borderTopLeftRadius: 30,
-              borderTopRightRadius: 30,
-              // padding: 35,
-              // alignItems: "center",
-              shadowColor: '#000',
-              shadowOffset: {
-                width: 0,
-                height: 2,
-              },
-              shadowOpacity: 0.25,
-              shadowRadius: 4,
-              elevation: 5,
-            }}>
-            <View style={{width: '95%', height: '95%', marginTop: 15}}>
-              <Text>Teste</Text>
-              <Pressable onPress={() => setModalVisible(!modalVisible)}>
-                <Text
-                  style={{
-                    marginLeft: -5,
-                    fontSize: 22,
-                    color: '#a8a8a8',
-                    fontWeight: 'bold',
-                    fontWeight: '400',
-                    textAlign: 'left',
-                  }}>
-                  X
-                </Text>
-              </Pressable>
-            </View>
-          </View>
-        </View>
-      </Modal>
+      <ModalFilter
+        modalVisible={modalVisible}
+        setModalVisible={setModalVisible}
+        // item={modalData}
+      />
       <SafeAreaView
         style={{
           backgroundColor: '#EFF9FF',
@@ -123,7 +74,7 @@ export default function Home() {
                 backgroundColor: '#fafeff',
               }}
               // icon={<Icon name="filter" size={20} color="black" />}
-              onPress={() => setModalVisible(true)}
+              onPress={() => openModal()}
             />
           </SafeAreaView>
         </SafeAreaView>
