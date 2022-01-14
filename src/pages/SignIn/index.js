@@ -20,8 +20,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
+    color:'#787878',
     fontSize: 36,
-    fontFamily: 'Comic Neue-Regular',
+    fontFamily: 'MochiyPopPOne-Regular',
   },
   logo: {
     width: 300,
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
     height: 60,
     backgroundColor: '#E4F2FA',
     overflow: 'hidden',
-    color: '#97B6C7',
+    color: '#787878',
     // fontSize: 18,
     marginBottom: 10,
   },
@@ -100,7 +101,7 @@ export default function SignIn() {
         }
       />
       <SafeAreaView style={styles.forgotAccount}>
-        <Text>Esqueci minha senha</Text>
+        <Text style={{color:'#787878'}}>Esqueci minha senha</Text>
       </SafeAreaView>
       <SafeAreaView style={styles.signin}>
       <Button

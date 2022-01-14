@@ -13,15 +13,25 @@ import Pets from '../../assets/Pets.svg';
 import Form from '../../assets/Form.svg';
 import Notification from '../../assets/Notifications.svg';
 import LogOut from '../../assets/Out.svg';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Profile() {
   const [open, setOpen] = React.useState(false);
+  
   const handleOpen = () => {
-    setOpen(true);
+    navigate
   };
   const handleClose = () => {
     setOpen(false);
   };
+
+  const navigation = useNavigation();
+
+  const handleSignClick = () =>{
+    navigation.reset({
+      routes:[{name:'SignIn'}]
+  });
+}
   return (
     <SafeAreaView style={{backgroundColor: '#EFF9FF', height: '100%'}}>
       <SafeAreaView
@@ -34,7 +44,7 @@ export default function Profile() {
           alignItems: 'center',
         }}>
         {/* <SafeAreaView style={{width: '85%', justifyContent: 'space-between'}}> */}
-        <Text style={{marginLeft: 15, fontSize: 20}}>Perfil</Text>
+        <Text style={{marginLeft: 15, fontSize: 20, color:'#323232'}}>Perfil</Text>
       </SafeAreaView>
       <SafeAreaView style={{marginTop: 10, height: '91.5%'}}>
         <TouchableOpacity
@@ -46,7 +56,7 @@ export default function Profile() {
             alignItems:'center'
           }}>
           <ProfileInfo style={{height: '25%'}} />
-          <Text style={{fontSize: 16, marginLeft:15}}>Dados Pessoais</Text>
+          <Text style={{fontSize: 16, marginLeft:15, color:'#323232'}}>Dados Pessoais</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={{
@@ -58,7 +68,7 @@ export default function Profile() {
             alignItems:'center'
           }}>
           <Pets style={{height: '25%'}} />
-          <Text style={{fontSize: 16, marginLeft:15}}>Meus Bichinhos</Text>
+          <Text style={{fontSize: 16, marginLeft:15, color:'#323232'}}>Meus Bichinhos</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={{
@@ -70,7 +80,7 @@ export default function Profile() {
             alignItems:'center'
           }}>
           <Form style={{height: '25%'}} />
-          <Text style={{fontSize: 16, marginLeft:15}}>Meus formulários de Adoção</Text>
+          <Text style={{fontSize: 16, marginLeft:15, color:'#323232'}}>Meus formulários de Adoção</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={{
@@ -82,10 +92,10 @@ export default function Profile() {
             alignItems:'center'
           }}>
           <Notification style={{height: '25%'}} />
-          <Text style={{fontSize: 16, marginLeft:15}}>Notificações</Text>
+          <Text style={{fontSize: 16, marginLeft:15, color:'#323232'}}>Notificações</Text>
         </TouchableOpacity>
         <TouchableOpacity
-        onClick={handleOpen}
+        onPress={() => handleSignClick()}
           style={{
             marginLeft: 15,
             marginTop:10,
@@ -95,7 +105,7 @@ export default function Profile() {
             alignItems:'center'
           }}>
           <LogOut style={{height: '25%'}} />
-          <Text style={{fontSize: 16, marginLeft:15}}>Sair</Text>
+          <Text style={{fontSize: 16, marginLeft:15, color:'#323232'}}>Sair</Text>
         </TouchableOpacity>
       </SafeAreaView>
     </SafeAreaView>

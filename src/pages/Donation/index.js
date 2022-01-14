@@ -7,7 +7,7 @@ export default function Home() {
     return ( 
         
             <SafeAreaView>
-        <Text>Donation</Text>
+        <Text style={{color:'#323232'}}>Donation</Text>
 </SafeAreaView>
         
        

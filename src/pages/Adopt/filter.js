@@ -8,7 +8,7 @@ import {
   View,
   Modal,
 } from 'react-native';
-import RadioButton from './RadioButton';
+import RadioButton from '../../components/Buttons/RadioButton';
 
 function ModalFilter({item, modalVisible, setModalVisible}) {
   const [option, setOption] = useState();

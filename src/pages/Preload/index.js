@@ -39,7 +39,7 @@ export default function Home() {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <Text style={{fontSize: 36, fontFamily: 'Comic Neue-Regular'}}>
+      <Text style={{fontSize: 36, fontFamily: 'MochiyPopPOne-Regular', color:'#787878'}}>
         Pet Ufra
       </Text>
       <NewLogo style={{width: 300, height: 250}} />

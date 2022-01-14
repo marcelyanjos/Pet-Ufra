@@ -35,7 +35,7 @@ export default function Home() {
       />
       <SafeAreaView
         style={{
-          backgroundColor: '#EFF9FF',
+          backgroundColor: '#fafdff',
           height: '100%',
           marginTop: 2,
           alignItems: 'center',
@@ -43,8 +43,8 @@ export default function Home() {
         <SafeAreaView
           style={{
             height: '7%',
-            width: '88%',
-            backgroundColor: '#EFF9FF',
+            width: '93%',
+            backgroundColor: '#fafdff',
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
@@ -54,9 +54,11 @@ export default function Home() {
             style={{
               fontWeight: '400',
               fontSize: 20,
-              borderBottomWidth: 1,
-              borderColor: '#aad7f2',
+              color:'#323232',
+              // borderBottomWidth: 1,
+              // borderColor: '#aad7f2',
               width: 100,
+              fontFamily:'PatuaOne-Regular'
             }}>
             Adoção
           </Text>

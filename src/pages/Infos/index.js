@@ -7,7 +7,7 @@ export default function Home() {
     return ( 
         
             <SafeAreaView>
-        <Text>Infos</Text>
+        <Text style={{color:'#323232'}}>Infos</Text>
 </SafeAreaView>
         
        
