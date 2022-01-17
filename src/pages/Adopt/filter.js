@@ -8,11 +8,16 @@ import {
   View,
   Modal,
 } from 'react-native';
-import RadioButton from '../../components/Buttons/RadioButton';
-
+import RadioButton1 from '../../components/Buttons/RadioButton1';
+import RadioButton2 from '../../components/Buttons/RadioButton2';
+import SliderButton from '../../components/Buttons/SliderButton';
 function ModalFilter({item, modalVisible, setModalVisible}) {
-  const [option, setOption] = useState();
-  const data = [{value: 'Cachorro'}, {value: 'Gato'}, {value: 'Todos'}];
+  const [optionSexo, setOptionSexo] = useState([]);
+  const [optionEspecie, setOptionEspecie]= useState([]);
+  // const [idade, setIdade] = useState(0);
+  const sexo = [{value: 'Cachorro'}, {value: 'Gato'}, {value: 'Todos'}];
+  const genero = [{value: 'Femea'}, {value: 'Macho'}, {value: 'Todos'}];
+   
   return (
     <Modal
       animationType="slide"
@@ -68,9 +73,14 @@ function ModalFilter({item, modalVisible, setModalVisible}) {
                 </Text>
               </Pressable>
             </View>
-            <View style={{height:'92%', marginTop:8}}>
-              <RadioButton data={data} onSelect={value => setOption(value)} />
+            <View style={{height: '92%', marginTop: 8, justifyContent:'space-between', alignItems:'center'}}>
+              <RadioButton1 data={sexo} onSelect={value => setOptionSexo(value)} />
+              <RadioButton2 data={genero} onSelect={value => setOptionEspecie(value)} />
+              <SliderButton />
+              <Text style={{color:'#666666'}}> Caracteristicas:</Text>
+
               {/* <Text> Your option: {option}</Text> */}
+                   {/* <Text style={{color: 'black'}}>{Math.floor(idade)}</Text> */}
             </View>
           </View>
         </View>

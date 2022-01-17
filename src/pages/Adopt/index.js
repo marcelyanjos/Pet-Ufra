@@ -11,8 +11,6 @@ import {
   Pressable,
 } from 'react-native';
 import {Button} from 'react-native-elements';
-import {ScrollView} from 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './style';
 import ModalFilter from './filter';
 import {data} from './data';
@@ -37,28 +35,40 @@ export default function Home() {
         style={{
           backgroundColor: '#fafdff',
           height: '100%',
-          marginTop: 2,
+          // marginTop: 2,
           alignItems: 'center',
         }}>
         <SafeAreaView
           style={{
             height: '7%',
-            width: '93%',
-            backgroundColor: '#fafdff',
+            width: '98.8%',
+            backgroundColor: '#ffffff',
+            shadowColor: '#000',
+            shadowOffset: {
+              width: 0,
+              height: 3,
+            },
+            shadowOpacity: 0.27,
+            shadowRadius: 4.65,
+
+            elevation: 6,
+            borderBottomLeftRadius:6,
+            borderBottomRightRadius:6,
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'space-between',
+            justifyContent: 'center',
             alignItems: 'center',
           }}>
+            <SafeAreaView style={{width:'92%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
           <Text
             style={{
               fontWeight: '400',
               fontSize: 20,
-              color:'#323232',
+              color: '#323232',
               // borderBottomWidth: 1,
               // borderColor: '#aad7f2',
               width: 100,
-              fontFamily:'PatuaOne-Regular'
+              fontFamily: 'PatuaOne-Regular',
             }}>
             Adoção
           </Text>
@@ -78,6 +88,7 @@ export default function Home() {
               // icon={<Icon name="filter" size={20} color="black" />}
               onPress={() => openModal()}
             />
+            </SafeAreaView>
           </SafeAreaView>
         </SafeAreaView>
 

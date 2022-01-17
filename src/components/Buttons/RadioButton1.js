@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, Pressable} from 'react-native';
 import {styles} from './style';
-export default function RadioButton({data, onSelect}) {
+export default function RadioButton1({data, onSelect}) {
   const [userOption, setUserOption] = useState(null);
   const selectHandler = value => {
     onSelect(value);
@@ -11,6 +11,7 @@ export default function RadioButton({data, onSelect}) {
   return (
     <View
       style={{
+        width:'98%',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -23,10 +24,10 @@ export default function RadioButton({data, onSelect}) {
         return (
           <Pressable
             style={
-              item.value === userOption ? styles.selected : styles.unselected
+              item.value === userOption ? styles.selectedButton1 : styles.unselectedButton1
             }
             onPress={() => selectHandler(item.value)}>
-            <Text style={item.value === userOption ? styles.TextSelected : styles.TextUnselected}> {item.value}</Text>
+            <Text style={item.value === userOption ? styles.TextSelectedButton1 : styles.TextUnselectedButton1}> {item.value}</Text>
           </Pressable>
         );
       })}
