@@ -8,16 +8,25 @@ import {
   View,
   Modal,
 } from 'react-native';
+import styles from './style';
 import RadioButton1 from '../../components/Buttons/RadioButton1';
 import RadioButton2 from '../../components/Buttons/RadioButton2';
 import SliderButton from '../../components/Buttons/SliderButton';
 function ModalFilter({item, modalVisible, setModalVisible}) {
   const [optionSexo, setOptionSexo] = useState([]);
-  const [optionEspecie, setOptionEspecie]= useState([]);
+  const [optionEspecie, setOptionEspecie] = useState([]);
+  const [userOption1, setUserOption1] = useState();
+  const [userOption2, setUserOption2] = useState();
+  const [userOption3, setUserOption3] = useState();
   // const [idade, setIdade] = useState(0);
   const sexo = [{value: 'Cachorro'}, {value: 'Gato'}, {value: 'Todos'}];
   const genero = [{value: 'Femea'}, {value: 'Macho'}, {value: 'Todos'}];
-   
+
+  const selectHandler = value => {
+    onSelect(value);
+    setUserOption(value);
+  };
+
   return (
     <Modal
       animationType="slide"
@@ -36,7 +45,7 @@ function ModalFilter({item, modalVisible, setModalVisible}) {
         }}>
         <View
           style={{
-            height: '60%',
+            height: '45%',
             width: '100%',
             justifyContent: 'center',
             alignItems: 'center',
@@ -54,7 +63,13 @@ function ModalFilter({item, modalVisible, setModalVisible}) {
             shadowRadius: 4,
             elevation: 5,
           }}>
-          <View style={{width: '95%', height: '95%', marginTop: 2}}>
+          <View
+            style={{
+              width: '95%',
+              height: '95%',
+              marginTop: 2,
+
+            }}>
             <View style={{display: 'flex', flexDirection: 'row'}}>
               <Text style={{textAlign: 'center', width: '100%'}}>Filtro</Text>
               <Pressable
@@ -73,14 +88,38 @@ function ModalFilter({item, modalVisible, setModalVisible}) {
                 </Text>
               </Pressable>
             </View>
-            <View style={{height: '92%', marginTop: 8, justifyContent:'space-between', alignItems:'center'}}>
-              <RadioButton1 data={sexo} onSelect={value => setOptionSexo(value)} />
-              <RadioButton2 data={genero} onSelect={value => setOptionEspecie(value)} />
+            <View
+              style={{
+                height: '90%',
+                marginTop: 8,
+                paddingBottom: 8,
+                justifyContent: 'space-between',
+                alignItems: 'center'
+              }}>
+              <RadioButton1
+                data={sexo}
+                onSelect={value => setOptionSexo(value)}
+              />
+              <RadioButton2
+                data={genero}
+                onSelect={value => setOptionEspecie(value)}
+              />
               <SliderButton />
-              <Text style={{color:'#666666'}}> Caracteristicas:</Text>
-
+              <View style={{width:'95%'}}>
+              <Text style={{color: '#666666',fontSize:16, marginBottom:'2%',marginLeft:'-2%'}}> Caracteristicas:</Text>
+              <View style={{width:'100%',height: 40,display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
+                <Pressable style={{borderWidth:1.5, borderColor:'#BBDFF3', width:'29%', justifyContent:'center', borderRadius:8}} onPress={() => setUserOption1()}>
+                  <Text style={{color: 'gray', textAlign:'center',fontSize:16}}>Dócil</Text>
+                </Pressable>
+                <Pressable style={{borderWidth:1.5, borderColor:'#BBDFF3', width:'29%', justifyContent:'center', borderRadius:8}} onPress={() => setUserOption2()}>
+                  <Text style={{color: 'gray', textAlign:'center',fontSize:16}}>Carinhoso</Text>
+                </Pressable>
+                <Pressable style={{borderWidth:1.5, borderColor:'#BBDFF3', width:'29%', justifyContent:'center', borderRadius:8}} onPress={() => setUserOption3()}>
+                  <Text style={{color: 'gray', textAlign:'center',fontSize:16}}>Divertido</Text>
+                </Pressable>
+              </View></View>
               {/* <Text> Your option: {option}</Text> */}
-                   {/* <Text style={{color: 'black'}}>{Math.floor(idade)}</Text> */}
+              {/* <Text style={{color: 'black'}}>{Math.floor(idade)}</Text> */}
             </View>
           </View>
         </View>

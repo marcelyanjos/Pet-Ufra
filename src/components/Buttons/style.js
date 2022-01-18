@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   TextSelectedButton1: {
-    fontSize: 20,
+    fontSize: 16,
     color: 'white',
     fontWeight:'600',
     marginTop: 3,
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     borderRightColor: 'white',
   },
   TextUnselectedButton1: {
-    fontSize: 20,
+    fontSize: 16,
     marginTop: 3,
     color: '#787878',
     textAlign: 'center',
@@ -33,14 +33,14 @@ const styles = StyleSheet.create({
     // borderRadius: 10,
   },
   TextSelectedButton2: {
-    fontSize: 20,
+    fontSize: 16,
     color: '#666666',
     fontWeight:'600',
     marginTop: 3,
     textAlign: 'center',
   },
   TextUnselectedButton2: {
-    fontSize: 20,
+    fontSize: 16,
     marginTop: 3,
     color: '#9ac9e3',
     textAlign: 'center',

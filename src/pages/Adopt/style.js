@@ -86,6 +86,37 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#2C2C2C',
   },
+  TextSelectedButton1: {
+    fontSize: 16,
+    color: 'white',
+    fontWeight:'600',
+    marginTop: 3,
+    textAlign: 'center',
+    borderLeftWidth: 1,
+    borderRightWidth: 1,
+    borderLeftColor: 'white',
+    borderRightColor: 'white',
+  },
+  TextUnselectedButton1: {
+    fontSize: 16,
+    marginTop: 3,
+    color: '#787878',
+    textAlign: 'center',
+    borderLeftWidth: 1,
+    borderRightWidth: 1,
+    borderLeftColor: '#BBDFF3',
+    borderRightColor: '#BBDFF3',
+  },
+  unselectedButton1: {
+    width: '33.3%',
+    display: 'flex',
+  },
+  selectedButton1: {
+    width: '33.3%',
+    backgroundColor: '#BBDFF3',
 
+    // padding: 10,
+    // borderRadius: 10,
+  },
 });
 export {styles};

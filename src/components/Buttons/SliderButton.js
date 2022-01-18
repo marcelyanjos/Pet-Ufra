@@ -8,8 +8,8 @@ export default function SliderButton() {
   return (
     <View style={{width:'100%'}}>
       <View style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
-          <Text style={{color:'#666666', fontSize:20}}>Idade</Text>
-          <Text style={{color:'#666666', fontSize:20}}>{Math.floor(idade)}</Text></View>
+          <Text style={{color:'#666666', fontSize:16}}>Idade</Text>
+          <Text style={{color:'#666666', fontSize:16}}>{Math.floor(idade)}</Text></View>
         <Slider style={{width:'100%',height:50}}
         minimumTrackTintColor='#bddff3'
         maximumTrackTintColor='#a2a2a2'
