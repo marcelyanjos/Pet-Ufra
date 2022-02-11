@@ -12,6 +12,8 @@ import styles from './style';
 import RadioButton1 from '../../components/Buttons/RadioButton1';
 import RadioButton2 from '../../components/Buttons/RadioButton2';
 import SliderButton from '../../components/Buttons/SliderButton';
+import Male from '../../assets/male.svg';
+import Female from '../../assets/female.svg'
 function ModalFilter({item, modalVisible, setModalVisible}) {
   const [optionSexo, setOptionSexo] = useState([]);
   const [optionEspecie, setOptionEspecie] = useState([]);
@@ -20,7 +22,7 @@ function ModalFilter({item, modalVisible, setModalVisible}) {
   const [userOption3, setUserOption3] = useState();
   // const [idade, setIdade] = useState(0);
   const sexo = [{value: 'Cachorro'}, {value: 'Gato'}, {value: 'Todos'}];
-  const genero = [{value: 'Femea'}, {value: 'Macho'}, {value: 'Todos'}];
+  const genero = [{value: 'Femea', icon:Female}, {value: 'Macho', icon:Male}, {value: 'Todos', icon:[Male,Female]}];
 
   const selectHandler = value => {
     onSelect(value);
@@ -96,17 +98,24 @@ function ModalFilter({item, modalVisible, setModalVisible}) {
                 justifyContent: 'space-between',
                 alignItems: 'center'
               }}>
+                <View style={{width:'100%',marginLeft:10}}>
+              <Text style={{color: '#666666',fontSize:16, marginRight:'2%', marginBottom:5}}> Especie:</Text>
+              <View style={{width:'100%', height: 40,display:'flex', flexDirection:'row'}}>
               <RadioButton1
                 data={sexo}
                 onSelect={value => setOptionSexo(value)}
               />
-              <RadioButton2
+              </View></View>
+              <View style={{width:'100%',marginLeft:10}}>
+              <Text style={{color: '#666666',fontSize:16,  marginRight:'2%', marginBottom:5}}> Genero:</Text>
+              <View style={{width:'100%', height: 40,display:'flex', flexDirection:'row'}}>
+              <RadioButton1
                 data={genero}
                 onSelect={value => setOptionEspecie(value)}
               />
-              <SliderButton />
+              </View></View>
               <View style={{width:'95%'}}>
-              <Text style={{color: '#666666',fontSize:16, marginBottom:'2%',marginLeft:'-2%'}}> Caracteristicas:</Text>
+              <Text style={{color: '#666666',fontSize:16, marginLeft:'-1%', marginBottom:5}}> Caracteristicas:</Text>
               <View style={{width:'100%',height: 40,display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
                 <Pressable style={{borderWidth:1.5, borderColor:'#BBDFF3', width:'29%', justifyContent:'center', borderRadius:8}} onPress={() => setUserOption1()}>
                   <Text style={{color: 'gray', textAlign:'center',fontSize:16}}>Dócil</Text>
@@ -118,6 +127,8 @@ function ModalFilter({item, modalVisible, setModalVisible}) {
                   <Text style={{color: 'gray', textAlign:'center',fontSize:16}}>Divertido</Text>
                 </Pressable>
               </View></View>
+              <SliderButton />
+              
               {/* <Text> Your option: {option}</Text> */}
               {/* <Text style={{color: 'black'}}>{Math.floor(idade)}</Text> */}
             </View>

@@ -21,7 +21,7 @@ export default function Main(){
     return(
         <>
         {/* <Header navigation={navigation}/> */}
-        <Text style={{color:'#323232'}}>HI LORENA</Text>
+        <Text style={{color:'#323232'}}>Redes sociais</Text>
         </>
     )
 }

@@ -17,8 +17,8 @@ export default function RadioButton1({data, onSelect}) {
         justifyContent: 'space-between',
         height: 40,
         borderRadius:10,
-        borderColor:'#BBDFF3',
-        borderWidth:1.5,
+        // borderColor:'#adadad',
+        // borderWidth:1.5,
       }}>
       {data.map(item => {
         return (
