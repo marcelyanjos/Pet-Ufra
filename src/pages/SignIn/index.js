@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color:'#787878',
-    fontSize: 36,
-    fontFamily: 'MochiyPopPOne-Regular',
+    fontSize: 50,
+    fontFamily: 'PatuaOne-Regular',
   },
   logo: {
     width: 300,

@@ -41,7 +41,7 @@ export default function Home() {
         <SafeAreaView
           style={{
             height: '7%',
-            width: '98.8%',
+            width: '100%',
             backgroundColor: '#ffffff',
             shadowColor: '#000',
             shadowOffset: {
@@ -70,7 +70,7 @@ export default function Home() {
               width: 100,
               fontFamily: 'PatuaOne-Regular',
             }}>
-            Adoção
+            ADOÇÃO
           </Text>
           <SafeAreaView>
             <Button
@@ -114,8 +114,15 @@ export default function Home() {
                     width: 170,
                     height: 250,
                     margin: 20,
-                    borderWidth: 0.8,
-                    borderColor: '#aad7f2',
+                    shadowColor: '#777',
+              shadowOffset: {
+                width: 0,
+                height: 3,
+              },
+              shadowOpacity: 0.27,
+              shadowRadius: 4.65,
+
+              elevation: 6,
                     borderRadius: 12.34,
                   }}>
                   <Image

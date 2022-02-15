@@ -13,13 +13,14 @@ import Pets from '../../assets/Pets.svg';
 import Form from '../../assets/Form.svg';
 import Notification from '../../assets/Notifications.svg';
 import LogOut from '../../assets/Out.svg';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
+import {data} from './data';
 
 export default function Profile() {
   const [open, setOpen] = React.useState(false);
-  
+
   const handleOpen = () => {
-    navigate
+    navigate;
   };
   const handleClose = () => {
     setOpen(false);
@@ -27,85 +28,144 @@ export default function Profile() {
 
   const navigation = useNavigation();
 
-  const handleSignClick = () =>{
+  const handleSignClick = () => {
     navigation.reset({
-      routes:[{name:'SignIn'}]
-  });
-}
+      routes: [{name: 'SignIn'}],
+    });
+  };
   return (
-    <SafeAreaView style={{backgroundColor: '#EFF9FF', height: '100%'}}>
-      <SafeAreaView
-        style={{
-          height: '7%',
-          backgroundColor: 'rgba(255,255,255,0.3)',
-          display: 'flex',
-          flexDirection: 'row',
-          // justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-        {/* <SafeAreaView style={{width: '85%', justifyContent: 'space-between'}}> */}
-        <Text style={{marginLeft: 15, fontSize: 20, color:'#323232'}}>Perfil</Text>
-      </SafeAreaView>
-      <SafeAreaView style={{marginTop: 10, height: '91.5%'}}>
+    <SafeAreaView style={{backgroundColor: '#fafafa', height: '100%'}}>
+      {/* <SafeAreaView
+        style={{width: '100%', height: '25%', alignItems: 'center'}}> */}
+        {/* <ImageBackground style={{
+          width:'100%',
+          resizeMode: "cover",
+          overflow: "hidden",}}
+           source={require('../../assets/bg.jpg')}> */}
+          <SafeAreaView
+            style={{
+              height: '22%',
+              width: '100%',
+              backgroundColor: '#BBDFF3',
+
+              shadowColor: '#000',
+              shadowOffset: {
+                width: 0,
+                height: 3,
+              },
+              shadowOpacity: 0.27,
+              shadowRadius: 4.65,
+
+              elevation: 6,
+              borderBottomLeftRadius: 6,
+              borderBottomRightRadius: 6,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <SafeAreaView style={{marginTop: '2%', width:'91%'}}>
+              <Text style={{color: 'black', fontSize:20, fontFamily:'PatuaOne-Regular'}}>PERFIL</Text>
+            </SafeAreaView>
+            <SafeAreaView
+              style={{
+                width: '92%',
+                height: '80%',
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                marginTop:'-2%'
+              }}>
+              <Image
+                style={{height: '72%', width: '27%', borderRadius: 100, borderWidth:1, borderColor:'#ababab'}}
+                source={data.user_profile}
+              />
+              <SafeAreaView>
+                <Text style={{marginLeft: 15, fontSize: 20, color: '#323232'}}>
+                  {data.nome}
+                </Text>
+                <Text style={{marginLeft: 15, fontSize: 15, color: '#323232'}}>
+                  {data.user}
+                </Text>
+              </SafeAreaView>
+            </SafeAreaView>
+          </SafeAreaView>
+        {/* </ImageBackground> */}
+      {/* </SafeAreaView> */}
+      <SafeAreaView style={{marginTop: 10, height: '26%',width:'100%', alignItems:'center', backgroundColor:'#cfcfcf'}}>
         <TouchableOpacity
           style={{
-            marginLeft: 15,
+            height:40,
+            width:'100%',
+            backgroundColor:'#fafafa',
             display: 'flex',
             flexDirection: 'row',
-            width: '92%',
-            alignItems:'center'
+            alignItems: 'center',
           }}>
-          <ProfileInfo style={{height: '25%'}} />
-          <Text style={{fontSize: 16, marginLeft:15, color:'#323232'}}>Dados Pessoais</Text>
+          {/* <ProfileInfo style={{height: '25%'}} /> */}
+          <Text style={{marginLeft:15,fontSize: 17, fontWeight:'400', color: '#323232'}}>
+            DADOS PESSOAIS
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={{
-            marginLeft: 15,
-            marginTop:10,
+            height:40,
+            marginTop:0.8,
+            backgroundColor:'#fafafa',
+            width: '100%',
             display: 'flex',
             flexDirection: 'row',
-            width: '92%',
-            alignItems:'center'
+            alignItems: 'center',
           }}>
-          <Pets style={{height: '25%'}} />
-          <Text style={{fontSize: 16, marginLeft:15, color:'#323232'}}>Meus Bichinhos</Text>
+          {/* <Pets style={{height: '25%'}} /> */}
+          <Text style={{marginLeft:15,fontSize: 17, fontWeight:'400', color: '#323232'}}>
+            MEUS PETS
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={{
-            marginLeft: 15,
-            marginTop:10,
+            height:40,
+            width: '100%',
             display: 'flex',
             flexDirection: 'row',
-            width: '92%',
-            alignItems:'center'
+            marginTop:0.5,
+            backgroundColor:'#fafafa',
+            alignItems: 'center',
           }}>
-          <Form style={{height: '25%'}} />
-          <Text style={{fontSize: 16, marginLeft:15, color:'#323232'}}>Meus formulários de Adoção</Text>
+          {/* <Form style={{height: '25%'}} /> */}
+          <Text style={{marginLeft:15,fontSize: 17, fontWeight:'400', color: '#323232'}}>
+            FORMULÁRIOS DE ADOÇÃO
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={{
-            marginLeft: 15,
-            marginTop:10,
+            height:40,
+            width: '100%',
             display: 'flex',
             flexDirection: 'row',
-            width: '92%',
-            alignItems:'center'
+            marginTop:0.5,
+            backgroundColor:'#fafafa',
+            alignItems: 'center',
+           
           }}>
-          <Notification style={{height: '25%'}} />
-          <Text style={{fontSize: 16, marginLeft:15, color:'#323232'}}>Notificações</Text>
+          {/* <Notification style={{height: '25%'}} /> */}
+          <Text style={{marginLeft:15,fontSize: 17, fontWeight:'400', color: '#323232'}}>
+            NOTIFICAÇÕES
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
-        onPress={() => handleSignClick()}
+          onPress={() => handleSignClick()}
           style={{
-            marginLeft: 15,
-            marginTop:10,
+            height:40,
+            width: '100%',
             display: 'flex',
             flexDirection: 'row',
-            width: '92%',
-            alignItems:'center'
+            marginTop:0.5,
+            backgroundColor:'#fafafa',
+            alignItems: 'center',
           }}>
-          <LogOut style={{height: '25%'}} />
-          <Text style={{fontSize: 16, marginLeft:15, color:'#323232'}}>Sair</Text>
+          {/* <LogOut style={{height: '25%'}} /> */}
+          <Text style={{marginLeft:15,fontSize: 17, fontWeight:'400', color: '#323232'}}>
+            SAIR
+          </Text>
         </TouchableOpacity>
       </SafeAreaView>
     </SafeAreaView>
