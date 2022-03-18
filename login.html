@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet UFRA</title>
+    <link rel="stylesheet" href="/fontawesome-free-6.1.0-web/css/all.css">
     <style>
         *{
             margin: 0;
@@ -42,7 +43,7 @@
 
         form input[type=email],form input[type=password]{
             margin: 5% 0% 4%;
-            width: 100%;
+            width: 90%;
             height: 45px;
             border-bottom:  1px solid #E4F2FA;
             border-top: none;
@@ -50,6 +51,10 @@
             border-right: none;
             font-size: 20px;
             padding: 30px 16px 30px;
+        }
+
+        ::placeholder {
+            color: #97B6C7;
         }
 
         form input[type=submit]{
@@ -64,6 +69,11 @@
             text-align: center;
             box-shadow: 0px 0px 15.25px 1px rgba(122,174,222,79);
         }
+        input:focus {
+            box-shadow: 0 0 0 0;
+            border: 0 none;
+            outline: 0;
+}
 
         form input[type=submit]:hover{
             background: #1453b3;
@@ -82,14 +92,24 @@
             color:#2c589b;
         }
 
+        i {
+            padding: 0px 0px 20px;
+            border-bottom:  1px solid #E4F2FA;
+            font-size: 30px;
+            color: #97B6C7;
+        }
+
+
+
+
     </style>
 
 </head>
 <body>
     <form>
             <h2>Login</h2>
-            <input type="email" name="e-mail" placeholder="Digite seu Usuario...">
-            <input type="password" name="senha" placeholder="Digite sua senha...">
+            <input type="email" name="e-mail" placeholder="Digite seu Usuario..."><span><i class="fa-regular fa-envelope"></i></span>
+            <input type="password" name="senha" placeholder="Digite sua senha..."><span><i class="fa-solid fa-lock"></i></span>
             <a href="#">Esqueci minha senha</a>
             <br>
             <input type="submit" name="acao" value="Entrar">
