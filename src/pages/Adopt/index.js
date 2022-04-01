@@ -52,48 +52,56 @@ export default function Home() {
             shadowRadius: 4.65,
 
             elevation: 6,
-            borderBottomLeftRadius:6,
-            borderBottomRightRadius:6,
+            borderBottomLeftRadius: 6,
+            borderBottomRightRadius: 6,
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-            <SafeAreaView style={{width:'92%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
-          <Text
+          <SafeAreaView
             style={{
-              fontWeight: '400',
-              fontSize: 20,
-              color: '#323232',
-              // borderBottomWidth: 1,
-              // borderColor: '#aad7f2',
-              width: 100,
-              fontFamily: 'PatuaOne-Regular',
+              width: '92%',
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
             }}>
-            ADOÇÃO
-          </Text>
-          <SafeAreaView>
-            <Button
-              type="clear"
-              // buttonStyle={{ width:'10%'}}
-              title="filtro"
-              titleStyle={{color: 'black', textAlign: 'center'}}
-              buttonStyle={{
-                borderWidth: 1,
-                borderRadius: 12,
-                borderColor: '#aad7f2',
-                height: 40,
-                backgroundColor: '#fafeff',
-              }}
-              // icon={<Icon name="filter" size={20} color="black" />}
-              onPress={() => openModal()}
-            />
+            <Text
+              style={{
+                fontWeight: '400',
+                fontSize: 20,
+                color: '#323232',
+                // borderBottomWidth: 1,
+                // borderColor: '#aad7f2',
+                // width: 100,
+                fontFamily: 'PatuaOne-Regular',
+              }}>
+              DISPONÍVEL PARA ADOÇÃO
+            </Text>
+            <SafeAreaView>
+              <Button
+                type="clear"
+                // buttonStyle={{ width:'10%'}}
+                title="filtro"
+                titleStyle={{color: 'black', textAlign: 'center'}}
+                buttonStyle={{
+                  borderWidth: 1,
+                  borderRadius: 12,
+                  borderColor: '#aad7f2',
+                  height: 40,
+                  backgroundColor: '#fafeff',
+                }}
+                // icon={<Icon name="filter" size={20} color="black" />}
+                onPress={() => openModal()}
+              />
             </SafeAreaView>
           </SafeAreaView>
         </SafeAreaView>
 
         {/* <ScrollView> */}
         <FlatList
+          style={{paddingLeft: 4, paddingRight: 4}}
           data={data}
           keyExtractor={item => item.id}
           numColumns={2}
@@ -111,26 +119,24 @@ export default function Home() {
                     alignItems: 'center',
                     backgroundColor: '#ffffff',
                     // flexGrow: 1,
-                    width: 170,
+                    width: 180,
                     height: 250,
-                    margin: 20,
+                    margin: 8,
                     shadowColor: '#777',
-              shadowOffset: {
-                width: 0,
-                height: 3,
-              },
-              shadowOpacity: 0.27,
-              shadowRadius: 4.65,
+                    shadowOffset: {
+                      width: 0,
+                      height: 3,
+                    },
+                    shadowOpacity: 0.27,
+                    shadowRadius: 4.65,
 
-              elevation: 6,
-                    borderRadius: 12.34,
+                    elevation: 8,
+                    // borderRadius: 12.34,
                   }}>
                   <Image
                     style={{
-                      width: 172,
-                      height: 124.3,
-                      borderTopLeftRadius: 12.34,
-                      borderTopRightRadius: 12.34,
+                      width: 180,
+                      height: 132,
                     }}
                     source={{uri: item.imagem}}
                   />
@@ -152,7 +158,7 @@ export default function Home() {
                         style={{
                           color: '#333333',
                           fontWeight: 'bold',
-                          fontSize: 18,
+                          fontSize: 16,
                         }}>
                         {item.nome}
                       </Text>
@@ -162,12 +168,12 @@ export default function Home() {
                       />
                     </SafeAreaView>
                     <SafeAreaView style={{width: '90%', height: '40%'}}>
-                      <Text style={{color: '#333333'}}>
+                      <Text style={{color: '#333333', fontSize:12}}>
                         Descrição: {item.descrição}
                       </Text>
                     </SafeAreaView>
                     <SafeAreaView style={{width: '90%'}}>
-                      <Text style={{color: '#333333'}}>
+                      <Text style={{color: '#333333', fontSize:12}}>
                         Idade: {item.idade}
                       </Text>
                     </SafeAreaView>

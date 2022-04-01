@@ -8,7 +8,7 @@ const data = [
     idade: '1a 6m',
     descrição: 'castrado',
     imagem:
-      'https://scontent-for1-1.xx.fbcdn.net/v/t1.6435-9/124886216_1277380439297611_5112417500763159822_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=a26aad&_nc_eui2=AeEVGX5D0E65qELcFmoq6PO09ewJimZpSR_17AmKZmlJH1e3Rzznv8AS_xfWpqoiVTG9lOSM7IwL5cbQEGq4BzHl&_nc_ohc=I7eEr-Xa1lEAX-w0kIx&_nc_ht=scontent-for1-1.xx&oh=f4a91e3b6de9b6fad3f3be39b5eca047&oe=617A92C8',
+      'https://scontent-for1-1.xx.fbcdn.net/v/t1.6435-9/124886216_1277380439297611_5112417500763159822_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=a26aad&_nc_ohc=jn2sFLIFO0kAX_GKXqK&_nc_ht=scontent-for1-1.xx&oh=00_AT-a8Vjbg-oC-iKNeo3Xbesgjrt8FHxq_3wyD0-Kv8mUBQ&oe=626BD548',
     gender:require('../../assets/male.png'),
   },
   {
@@ -17,7 +17,7 @@ const data = [
     nome: 'Eve',
     idade: '1a 6m',
     descrição: 'amigavel, gosta de ...',
-    imagem: 'https://scontent-for1-1.xx.fbcdn.net/v/t1.6435-9/123290555_1268426810192974_1915997393173606687_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=a26aad&_nc_eui2=AeFg9Uk8BOmH9-1A5Qnbba8OySX0wsZrn-HJJfTCxmuf4TTZxv-muiZDuhIZ5RVWguCig76waBcvBMHKHW26h7v5&_nc_ohc=G9cNnkmq_XEAX97dB-p&tn=Lc9UxnXcFWcDsCr1&_nc_ht=scontent-for1-1.xx&oh=45035ad77813133e9eeb5592b39111e5&oe=6178AA13',
+    imagem: 'https://scontent-for1-1.xx.fbcdn.net/v/t1.6435-9/123290555_1268426810192974_1915997393173606687_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=a26aad&_nc_ohc=L4rjLliXAOYAX-d3S4H&_nc_ht=scontent-for1-1.xx&oh=00_AT8pxYWH3kXwpK2c8CnvuGhsP9DsHbEti0HWaEXnv2Nzpw&oe=626DE113',
     gender:require('../../assets/female.png'),
   },
   {

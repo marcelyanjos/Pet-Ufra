@@ -7,7 +7,7 @@ export default function Main(){
 
     return(
         <>
-        <Text style={{color:'#323232'}}>Informações sobre o canil</Text>
+        <Text style={{color:'#323232'}}>Camas e Almofadas</Text>
         </>
     )
 }

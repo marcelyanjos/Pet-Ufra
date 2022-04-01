@@ -1,7 +1,7 @@
 const data = 
 {
     id:254,
-    user: 'teste.user',
+    user: 'jane.doe',
     user_profile:require('../../assets/profile1.jpg'),
     nome: 'Jane Doe',
     email:'janedoe@email.com',
