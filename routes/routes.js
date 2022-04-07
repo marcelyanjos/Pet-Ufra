@@ -9,8 +9,9 @@ import SignUp from '../src/pages/SignUp';
 import HomeScreen from './MainTab';
 // import Main from '../pages/Main/index'
 import Filter from '../src/pages/Adopt/filter';
-import Medicine from '../src/pages/Donation/Categories/Medicine';
-import ItemMedicine from '../src/pages/Donation/Categories/ItemMedicine';
+import Medicine from '../src/pages/Donation/Categories/Medicamentos/Medicine';
+import ItemMedicine from '../src/pages/Donation/Categories/Medicamentos/ItemMedicine';
+import ItemMedicineEdit from '../src/pages/Donation/Categories/Medicamentos/ItemMedicineEdit';
 import Food from '../src/pages/Donation/Categories/Food';
 const Stack = createStackNavigator();
 
@@ -21,7 +22,11 @@ const Donations = [
   },
   {
     name: 'ItemMedicine',
-    component: ItemMedicine
+    component: ItemMedicine,
+  },
+  { 
+    name: 'ItemMedicineEdit',
+    component: ItemMedicineEdit
   },
   {
     name: 'Food',
