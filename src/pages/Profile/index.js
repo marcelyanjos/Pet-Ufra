@@ -19,7 +19,8 @@ import Account from '../../assets/account.svg';
 import Paw from '../../assets/paw.svg';
 import FormAdoption from '../../assets/formAdoption.svg';
 import Out from '../../assets/out_outline.svg';
-import { Divider } from 'react-native-paper';
+import {Divider} from 'react-native-paper';
+import styles from './styles';
 
 export default function Profile() {
   const [open, setOpen] = React.useState(false);
@@ -39,8 +40,8 @@ export default function Profile() {
     });
   };
   return (
-    <SafeAreaView style={{backgroundColor: '#FFFFFF', height: '100%'}}>
-      <SafeAreaView
+    <SafeAreaView style={styles.root}>
+      {/* <SafeAreaView
         style={{
           height: '7%',
           width: '100%',
@@ -60,8 +61,8 @@ export default function Profile() {
           flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
-        }}>
-        <SafeAreaView
+        }}> */}
+      {/* <SafeAreaView
           style={{
             width: '92%',
             display: 'flex',
@@ -81,69 +82,17 @@ export default function Profile() {
             }}>
             PERFIL
           </Text>
-        </SafeAreaView>
-      </SafeAreaView>
-      <SafeAreaView
-        style={{
-          height: '22%',
-          width: '100%',
-          backgroundColor: '#dcf1ff',
+        </SafeAreaView> */}
+      {/* </SafeAreaView> */}
 
-          shadowColor: '#000',
-          shadowOffset: {
-            width: 0,
-            height: 3,
-          },
-          shadowOpacity: 0.27,
-          shadowRadius: 4.65,
-
-          elevation: 1.5,
-          borderBottomLeftRadius: 6,
-          borderBottomRightRadius: 6,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-        <SafeAreaView
-          style={{
-            width: '92%',
-            height: '80%',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            marginTop: '-2%',
-          }}>
-          <Image
-            style={{
-              height: '72%',
-              width: '24%',
-              borderRadius: 100,
-              borderWidth: 1,
-              borderColor: '#ababab',
-            }}
-            source={data.user_profile}
-          />
+      {/* Informações do perfil */}
+      <SafeAreaView style={styles.info}>
+        <SafeAreaView style={styles.infobody}>
+          <Image style={styles.image} source={data.user_profile} />
           <SafeAreaView>
-            <Text
-              style={{
-                marginLeft: 15,
-                fontFamily: 'PatuaOne-Regular',
-                fontSize: 22,
-                color: '#00000',
-              }}>
-              {data.nome}
-            </Text>
-            <Text style={{marginLeft: 15, fontSize: 12, color: '#7f898f'}}>
-              {data.user}
-            </Text>
-            <Text
-              style={{
-                marginLeft: 15,
-                marginTop: 5,
-                fontSize: 10,
-                color: '#7f898f',
-              }}>
-              {data.email}
-            </Text>
+            <Text style={styles.name}>{data.nome}</Text>
+            <Text style={styles.user}>{data.user}</Text>
+            <Text style={styles.email}>{data.email}</Text>
           </SafeAreaView>
         </SafeAreaView>
       </SafeAreaView>
@@ -156,98 +105,36 @@ export default function Profile() {
           width: '100%',
           alignItems: 'center',
         }}> */}
-        <TouchableOpacity
-          style={{
-            height: 40,
-            width: '100%',
-            backgroundColor: '#FFFFFF',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
+
+      {/* Menu do perfil */}
+      <SafeAreaView style={styles.menu}>
+        <TouchableOpacity style={styles.touchable}>
           {/* <ProfileInfo style={{height: '25%'}} /> */}
-          <Account style={{marginLeft: 15}} />
-          <Text
-            style={{
-              marginLeft: 15,
-              fontSize: 17,
-              fontWeight: '400',
-              color: '#323232',
-            }}>
-            DADOS PESSOAIS
-          </Text>
+          <Account style={styles.icons} />
+          <Text style={styles.text}>DADOS PESSOAIS</Text>
         </TouchableOpacity>
         <Divider />
-        <TouchableOpacity
-          style={{
-            height: 40,
-            marginTop: 1.5,
-            backgroundColor: '#FFFFFF',
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
+        <TouchableOpacity style={styles.touchable}>
           {/* <Pets style={{height: '25%'}} /> */}
-          <Paw style={{marginLeft: 13}} />
-          <Text
-            style={{
-              marginLeft: 11,
-              fontSize: 17,
-              fontWeight: '400',
-              color: '#323232',
-            }}>
-            MEUS PETS
-          </Text>
+          <Paw style={styles.icons2} />
+          <Text style={styles.text}>MEUS PETS</Text>
         </TouchableOpacity>
         <Divider />
-        <TouchableOpacity
-          style={{
-            height: 40,
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'row',
-            marginTop: 1.5,
-            backgroundColor: '#FFFFFF',
-            alignItems: 'center',
-          }}>
+        <TouchableOpacity style={styles.touchable}>
           {/* <Form style={{height: '25%'}} /> */}
-          <FormAdoption style={{marginLeft: 13}} />
-          <Text
-            style={{
-              marginLeft: 13,
-              fontSize: 17,
-              fontWeight: '400',
-              color: '#323232',
-            }}>
-            FORMULÁRIOS DE ADOÇÃO
-          </Text>
+          <FormAdoption style={styles.icons2} />
+          <Text style={styles.text}>FORMULÁRIOS DE ADOÇÃO</Text>
         </TouchableOpacity>
         <Divider />
         <TouchableOpacity
           onPress={() => handleSignClick()}
-          style={{
-            height: 40,
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'row',
-            marginTop: 1.5,
-            backgroundColor: '#FFFFFF',
-            alignItems: 'center',
-          }}>
-          <Out style={{marginLeft: 15}} />
+          style={styles.touchable}>
+          <Out style={styles.icons} />
           {/* <LogOut style={{height: '25%'}} /> */}
-          <Text
-            style={{
-              marginLeft: 15,
-              fontSize: 17,
-              fontWeight: '400',
-              color: '#323232',
-            }}>
-            SAIR
-          </Text>
+          <Text style={styles.text}>SAIR</Text>
         </TouchableOpacity>
         <Divider />
+      </SafeAreaView>
       {/* </SafeAreaView> */}
     </SafeAreaView>
   );

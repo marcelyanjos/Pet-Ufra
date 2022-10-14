@@ -1,3 +1,4 @@
+// Não lembro para que serve
 import React, { createContext, useReducer } from 'react';
 import { inicialState, UserReducer } from '../reducer/UserReducer'
 

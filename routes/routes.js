@@ -1,3 +1,4 @@
+// Paginas de navegação
 import React, {memo} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -13,6 +14,7 @@ import Medicine from '../src/pages/Donation/Categories/Medicamentos/Medicine';
 import ItemMedicine from '../src/pages/Donation/Categories/Medicamentos/ItemMedicine';
 import ItemMedicineEdit from '../src/pages/Donation/Categories/Medicamentos/ItemMedicineEdit';
 import Food from '../src/pages/Donation/Categories/Food';
+import AdoptItem from '../src/pages/Adopt/AdoptItem';
 const Stack = createStackNavigator();
 
 const Donations = [
@@ -24,15 +26,16 @@ const Donations = [
     name: 'ItemMedicine',
     component: ItemMedicine,
   },
-  { 
+  {
     name: 'ItemMedicineEdit',
-    component: ItemMedicineEdit
+    component: ItemMedicineEdit,
   },
   {
     name: 'Food',
     component: Food,
   },
 ];
+const Adopt = [{name: 'AdoptItem', component: AdoptItem}];
 function Routes() {
   return (
     <NavigationContainer>
@@ -45,9 +48,23 @@ function Routes() {
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="Main" component={HomeScreen} />
         {Donations.map(index => {
-          return <Stack.Screen name={index.name} component={index.component} />;
+          return (
+            <Stack.Screen
+              name={index.name}
+              key={index.name}
+              component={index.component}
+            />
+          );
         })}
-
+        {Adopt.map(index => {
+          return (
+            <Stack.Screen
+              name={index.name}
+              key={index.name}
+              component={index.component}
+            />
+          );
+        })}
         <Stack.Screen name="Filter" component={Filter} />
       </Stack.Navigator>
     </NavigationContainer>

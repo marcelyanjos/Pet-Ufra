@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "PetUfra.app"
-               BlueprintName = "PetUfra"
-               ReferencedContainer = "container:PetUfra.xcodeproj">
+               BuildableName = "petufra.app"
+               BlueprintName = "petufra"
+               ReferencedContainer = "container:petufra.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "PetUfraTests.xctest"
-               BlueprintName = "PetUfraTests"
-               ReferencedContainer = "container:PetUfra.xcodeproj">
+               BuildableName = "petufraTests.xctest"
+               BlueprintName = "petufraTests"
+               ReferencedContainer = "container:petufra.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "PetUfra.app"
-            BlueprintName = "PetUfra"
-            ReferencedContainer = "container:PetUfra.xcodeproj">
+            BuildableName = "petufra.app"
+            BlueprintName = "petufra"
+            ReferencedContainer = "container:petufra.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "PetUfra.app"
-            BlueprintName = "PetUfra"
-            ReferencedContainer = "container:PetUfra.xcodeproj">
+            BuildableName = "petufra.app"
+            BlueprintName = "petufra"
+            ReferencedContainer = "container:petufra.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

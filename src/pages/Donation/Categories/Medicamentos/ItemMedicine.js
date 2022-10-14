@@ -70,11 +70,11 @@ export default function Main({navigation, item, isItem}) {
           }}>
           {data[0].nome}
         </Text>
-        <Text style={{fontSize: 15, marginBottom: 8, width: '100%'}}>
+        <Text style={{fontSize: 15, marginBottom: 8, width: '100%', color:'black'}}>
           Descrição:{' '}
         </Text>
-        <Text style={{fontSize: 15, marginBottom: 8}}>{data[0].descricao}</Text>
-        <Text style={{fontSize: 15, marginBottom: 8, width: '100%'}}>
+        <Text style={{fontSize: 15, marginBottom: 8, color:'black'}}>{data[0].descricao}</Text>
+        <Text style={{fontSize: 15, marginBottom: 8, width: '100%', color:'black'}}>
           Valor de mercado:
         </Text>
         <Text
@@ -98,8 +98,8 @@ export default function Main({navigation, item, isItem}) {
               justifyContent: 'space-between',
               textAlign: 'center',
             }}>
-            <Text>Total em estoque</Text>
-            <Text>{data[0].total_estoque} qtd.</Text>
+            <Text style={{color:'black'}}>Total em estoque</Text>
+            <Text style={{color:'black'}}>{data[0].total_estoque} qtd.</Text>
           </SafeAreaView>
           <SafeAreaView
             style={{
@@ -110,8 +110,8 @@ export default function Main({navigation, item, isItem}) {
               justifyContent: 'space-between',
               textAlign: 'center',
             }}>
-            <Text>Minimo necessário</Text>
-            <Text>{data[0].minimo_necessario} qtd.</Text>
+            <Text style={{color:'black'}}>Minimo necessário</Text>
+            <Text style={{color:'black'}}>{data[0].minimo_necessario} qtd.</Text>
           </SafeAreaView>
         </SafeAreaView>
         <TouchableOpacity

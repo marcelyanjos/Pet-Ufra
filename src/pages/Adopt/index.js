@@ -1,3 +1,4 @@
+//Faltou trocar estilos
 import React, {useRef, useCallback, useState} from 'react';
 import {
   Image,
@@ -8,21 +9,29 @@ import {
   StyleSheet,
   View,
   Text,
-  Pressable,
+  Pressable, TouchableOpacity 
 } from 'react-native';
 import {Button} from 'react-native-elements';
 import styles from './style';
 import ModalFilter from './filter';
 import {data} from './data';
+import {useNavigation} from '@react-navigation/native';
 
 export default function Home() {
   const [modalVisible, setModalVisible] = useState(false);
   // const [modalData, setModalData] = useState({});
 
+    const navigation = useNavigation();
+
   function openModal() {
     // setModalData();
     setModalVisible(true);
   }
+
+  const handleAdoptItemClick = () => {
+    console.log('clicked')
+    navigation.navigate('AdoptItem');
+  };
 
   return (
     <SafeAreaView>
@@ -114,7 +123,7 @@ export default function Home() {
                   display: 'flex',
                   justifyContent: 'center',
                 }}>
-                <SafeAreaView
+                <TouchableOpacity
                   style={{
                     alignItems: 'center',
                     backgroundColor: '#ffffff',
@@ -132,7 +141,8 @@ export default function Home() {
 
                     elevation: 8,
                     // borderRadius: 12.34,
-                  }}>
+                  }}
+                  onPress={()=>handleAdoptItemClick()}>
                   <Image
                     style={{
                       width: 180,
@@ -178,7 +188,7 @@ export default function Home() {
                       </Text>
                     </SafeAreaView>
                   </SafeAreaView>
-                </SafeAreaView>
+                </TouchableOpacity>
               </SafeAreaView>
             );
           }}
